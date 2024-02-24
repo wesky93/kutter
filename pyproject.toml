@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kutter"
+description = "kubernetes node deprovisining tool"
+redhat = "REDEME.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: POSIX  :: Linux",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ['version', 'dependencies', 'optional-dependencies']
+
+[tool.setuptools.dynamic]
+version = { file = ["VERSION"] }
+dependencies = { file = ["requirements.txt"] }
+optional-dependencies = { file = ["requirements-dev.txt"] }
+
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = ["--import-mode=importlib", ]
