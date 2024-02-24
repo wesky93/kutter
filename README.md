@@ -4,6 +4,7 @@ Cut the node in the desired state at the desired time.
 This is still a proof-of-concept project.
 
 
+
 ## What is it?
 
 It is a service that organizes nodes so that nodes can be operated efficiently at the desired time. Even in enterprise environments, you can run Kubernetes clusters cost-effectively by quickly organizing a large number of nodes and deployments.
@@ -38,6 +39,12 @@ We will support installation via Helm.
 ## Usage
 
 WIP
+
+
+## Architecture
+
+![architecture.png](architecture.png)
+
 
 
 ## Contributing
